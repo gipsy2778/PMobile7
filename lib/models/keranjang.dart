@@ -11,7 +11,6 @@ class Keranjang extends ChangeNotifier {
     notifyListeners();
   }
 
-  // 👉 Tambahkan fungsi hapus
   void hapus(int index) {
     _isiKeranjang.removeAt(index);
     notifyListeners();
