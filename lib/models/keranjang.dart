@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pertemuan7/models/barang.dart';
+import 'package:tugas7/models/barang.dart';
 
 class Keranjang extends ChangeNotifier {
   final List<Barang> _isiKeranjang = [];
@@ -8,6 +8,12 @@ class Keranjang extends ChangeNotifier {
 
   void tambah(Barang barang) {
     _isiKeranjang.add(barang);
+    notifyListeners();
+  }
+
+  // 👉 Tambahkan fungsi hapus
+  void hapus(int index) {
+    _isiKeranjang.removeAt(index);
     notifyListeners();
   }
 }

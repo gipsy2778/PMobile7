@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pertemuan7/models/barang.dart';
-import 'package:pertemuan7/models/keranjang.dart';
-import 'package:pertemuan7/views/halamanKeranjang.dart';
+import 'package:tugas7/models/barang.dart';
+import 'package:tugas7/models/keranjang.dart';
+import 'package:tugas7/views/halamanKeranjang.dart';
 import 'package:provider/provider.dart';
 
 class HalamanBarang extends StatelessWidget {

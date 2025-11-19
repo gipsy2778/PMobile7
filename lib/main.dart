@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pertemuan7/models/keranjang.dart';
-import 'package:pertemuan7/views/halamanBarang.dart';
+import 'package:tugas7/models/keranjang.dart';
+import 'package:tugas7/views/halamanBarang.dart';
 import 'package:provider/provider.dart';
 
 void main() {

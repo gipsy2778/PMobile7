@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pertemuan7/models/keranjang.dart';
+import 'package:tugas7/models/keranjang.dart';
 import 'package:provider/provider.dart';
 
 class HalamanKeranjang extends StatelessWidget {
@@ -8,7 +8,10 @@ class HalamanKeranjang extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Keranjang"), backgroundColor: Colors.amber),
+      appBar: AppBar(
+        title: Text("Keranjang"), 
+        backgroundColor: Colors.amber,
+      ),
       body: Consumer<Keranjang>(
         builder: (context, value, child) {
           if (value.isiKeranjang.isEmpty) {
@@ -16,8 +19,16 @@ class HalamanKeranjang extends StatelessWidget {
           }
           return ListView.builder(
             itemCount: value.isiKeranjang.length,
-            itemBuilder: (context, index) =>
-                ListTile(title: Text(value.isiKeranjang[index].nama)),
+            itemBuilder: (context, index) => ListTile(
+              title: Text(value.isiKeranjang[index].nama),
+
+              trailing: IconButton(
+                icon: Icon(Icons.delete, color: Colors.red),
+                onPressed: () {
+                  value.hapus(index);
+                },
+              ),
+            ),
           );
         },
       ),
